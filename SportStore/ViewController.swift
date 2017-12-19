@@ -7,8 +7,18 @@
 //
 
 import UIKit
+
+
+var handler = { (p: Product) in
+    print("Changes: \(p.name) \(p.stockLevel) items in stock")
+}
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //let logger = Logger<Product>(callback: handler)
+    let logger = Logger<Product> { (product) in
+        
+        print("Changes: \(product.name) \(product.stockLevel) items in stock")
+    }
     var products = [
         Product(name:"Kayak", description:"A boat for one person",
                 category:"Watersports", price:275.0, stockLevel:10),
@@ -72,6 +82,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             } }
                         cell.stepper.value = Double(product.stockLevel);
                         cell.currentProductStockTF.text = String(product.stockLevel);
+                        logger.logItem(item: product)
+                       logger.processItem(callback: handler)
                     }
                     break;
                 }
@@ -110,12 +122,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func displayStockTotal() {
-        let finalTotals:(Int, Double) = products.reduce((0, 0.0),
-                                                        {(totals, product) -> (Int, Double) in
-                                                            return (
-                                                                totals.0 + product.stockLevel,
-                                                                totals.1 + product.stockValue
-                                                            ); });
+        let finalTotals:(Int, Double) = products.reduce((0, 0.0),{(totals, product) -> (Int, Double) in
+            return (totals.0 + product.stockLevel, totals.1 + product.stockValue)
+        });
         productView.totalProductLabel.text = "\(finalTotals.0) Products in Stock. "
             + "Total Value: \(Utils.currencyStringFromNumber(number: finalTotals.1))";
     }
