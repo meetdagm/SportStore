@@ -14,6 +14,10 @@
 		61CB70681FD9F63A006E5273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CB70661FD9F63A006E5273 /* LaunchScreen.storyboard */; };
 		61CB70731FD9F63A006E5273 /* SportStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB70721FD9F63A006E5273 /* SportStoreTests.swift */; };
 		61CB707E1FD9F63A006E5273 /* SportStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB707D1FD9F63A006E5273 /* SportStoreUITests.swift */; };
+		61CB708C1FD9F934006E5273 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB708B1FD9F934006E5273 /* ProductView.swift */; };
+		61CB708E1FD9FBBC006E5273 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB708D1FD9FBBC006E5273 /* ProductCell.swift */; };
+		61CB70A51FDA72A7006E5273 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB70A41FDA72A7006E5273 /* Utils.swift */; };
+		61CB70A71FDA73C5006E5273 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CB70A61FDA73C5006E5273 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		61CB70791FD9F63A006E5273 /* SportStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61CB707D1FD9F63A006E5273 /* SportStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportStoreUITests.swift; sourceTree = "<group>"; };
 		61CB707F1FD9F63A006E5273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61CB708B1FD9F934006E5273 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		61CB708D1FD9FBBC006E5273 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		61CB70A41FDA72A7006E5273 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		61CB70A61FDA73C5006E5273 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +107,14 @@
 			children = (
 				61CB705D1FD9F63A006E5273 /* AppDelegate.swift */,
 				61CB705F1FD9F63A006E5273 /* ViewController.swift */,
+				61CB70A41FDA72A7006E5273 /* Utils.swift */,
+				61CB70A61FDA73C5006E5273 /* Product.swift */,
 				61CB70611FD9F63A006E5273 /* Main.storyboard */,
 				61CB70641FD9F63A006E5273 /* Assets.xcassets */,
 				61CB70661FD9F63A006E5273 /* LaunchScreen.storyboard */,
 				61CB70691FD9F63A006E5273 /* Info.plist */,
+				61CB708B1FD9F934006E5273 /* ProductView.swift */,
+				61CB708D1FD9FBBC006E5273 /* ProductCell.swift */,
 			);
 			path = SportStore;
 			sourceTree = "<group>";
@@ -260,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				61CB70601FD9F63A006E5273 /* ViewController.swift in Sources */,
+				61CB708E1FD9FBBC006E5273 /* ProductCell.swift in Sources */,
+				61CB70A51FDA72A7006E5273 /* Utils.swift in Sources */,
+				61CB708C1FD9F934006E5273 /* ProductView.swift in Sources */,
 				61CB705E1FD9F63A006E5273 /* AppDelegate.swift in Sources */,
+				61CB70A71FDA73C5006E5273 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
