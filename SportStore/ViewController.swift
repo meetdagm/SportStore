@@ -54,17 +54,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         setupCell()
         displayStockTotal()
         setupDelegate()
-        setupTarget()
     }
     
     func setupCell() {
         
         productView.tableView.register(ProductCell.self, forCellReuseIdentifier: cellID)
-        
-    }
-    
-    func setupTarget() {
-        
         
     }
     
@@ -106,7 +100,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let product = products[indexPath.row]
         let cell = (productView.tableView.dequeueReusableCell(withIdentifier: cellID) as? ProductCell)!
         cell.productTitle.text = product.name
-        cell.productDescription.text = product.description
+        cell.productDescription.text = product.productDescription
         cell.stepper.value = Double(product.stockLevel)
         cell.currentProductStockTF.text = String(product.stockLevel)
         cell.product = products[indexPath.row]

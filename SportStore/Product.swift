@@ -42,11 +42,10 @@ class Product: NSObject, NSCopying{
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Product(name: self.name, description: self.description, category: self.category, price: self.price, stockLevel: self.stockLevel)
+        return Product(name: self.name, description:
+            self.productDescription, category: self.category, price: self.price, stockLevel: self.stockLevel)
     }
     
-    
-
 }
 
 
